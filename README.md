@@ -41,4 +41,10 @@ The code also contains estimators for the Almgren et al. model. As of right now,
 
 ## RL-PPO-NICK.ipynb
 
-This is my fork of the RL-PPO file provided. It introduces the 5 new features in the beginning and, instead of having the trader and blotter, has just the trader that has a cost function equal to that of the Obizhaeva and Wang model. The algorithm is also reactive: the price now reacts to decisions to buy and/or sell, using the observed values of AAPL stock as the fundamental trend.
+This is my fork of the RL-PPO file provided. It introduces the 5 new features in the beginning and, instead of having the trader and blotter, has just the trader that has a cost function equal to that of the Obizhaeva and Wang model. The algorithm is also reactive: the price now reacts to decisions to buy and/or sell, using the observed values of AAPL stock as the fundamental trend. In addition, it uses the new cost calculation presented in Obizhaeva and Wang for slippage calculation.
+
+Results:
+
+- Reward scaled well
+- Ask price and midpoint stayed relatively consistent for day trades
+- The model performs relatively the same, but now costs and prices scale with trades
